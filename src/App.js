@@ -14,130 +14,55 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 3000);
+    }, 2500);
     return () => clearTimeout(timer);
   }, []);
 
-  const loadingWords = ["Lake", "Agency", "Digital", "Creative", "Innovation"];
+  const words = ["Lake", "Agency"];
   
-  const containerVariants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.1,
-        delayChildren: 0.2,
-      },
-    },
-    exit: {
-      opacity: 0,
-      transition: {
-        duration: 0.5,
-        staggerChildren: 0.05,
-        staggerDirection: -1,
-      },
-    },
-  };
-
-  const wordVariants = {
-    hidden: { 
-      opacity: 0, 
-      y: 50,
-      scale: 0.8,
-      rotateX: 90
-    },
-    visible: { 
-      opacity: 1, 
-      y: 0,
-      scale: 1,
-      rotateX: 0,
-      transition: {
-        duration: 0.8,
-        ease: "easeOut",
-      }
-    },
-    exit: {
-      opacity: 0,
-      y: -50,
-      scale: 1.2,
-      rotateX: -90,
-      transition: {
-        duration: 0.4,
-        ease: "easeIn",
-      }
-    },
-  };
-
-  const finalWordVariants = {
-    hidden: { 
-      opacity: 0, 
-      scale: 0.5,
-      rotate: -180
-    },
-    visible: { 
-      opacity: 1, 
-      scale: 1,
-      rotate: 0,
-      transition: {
-        duration: 1,
-        ease: "easeOut",
-        delay: 0.5
-      }
-    },
-    exit: {
-      opacity: 0,
-      scale: 2,
-      rotate: 180,
-      transition: {
-        duration: 0.6,
-        ease: "easeIn",
-      }
-    },
-  };
-
   return (
     <div className="App">
       <AnimatePresence mode="wait">
         {isLoading ? (
           <motion.div
             className="loading-screen"
-            variants={containerVariants}
-            initial="hidden"
-            animate="visible"
-            exit="exit"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
           >
             <div className="loading-container">
-              <div className="loading-words">
-                {loadingWords.map((word, index) => (
+              <motion.img
+                src="/cover.png"
+                alt="Lake Agency"
+                className="loading-logo"
+                initial={{ y: -200, opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              />
+              <div className="loading-text">
+                {words.map((word, index) => (
                   <motion.span
                     key={word}
                     className="loading-word"
-                    variants={wordVariants}
-                    style={{
-                      position: 'absolute',
-                      top: '50%',
-                      left: '50%',
-                      transform: 'translate(-50%, -50%)',
+                    initial={{ y: -100, opacity: 0 }}
+                    animate={{ y: 0, opacity: 1 }}
+                    transition={{ 
+                      duration: 0.6, 
+                      delay: 0.8 + (index * 0.3)
                     }}
                   >
                     {word}
                   </motion.span>
                 ))}
               </div>
-              <motion.div
-                className="final-logo"
-                variants={finalWordVariants}
-              >
-                <img src="/cover.png" alt="Lake Agency" className="loading-logo-image" />
-                <h1 className="loading-title">Lake Agency</h1>
-              </motion.div>
             </div>
           </motion.div>
         ) : (
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.5 }}
           >
             <Navbar />
             <Hero />

@@ -12,73 +12,39 @@
   left: 0;
   width: 100%;
   height: 100vh;
-  background: linear-gradient(135deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+  background: #000000;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  overflow: hidden;
 }
 
 .loading-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.loading-words {
-  position: relative;
-  width: 300px;
-  height: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.loading-word {
-  font-size: 4rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #00ffff 0%, #0099ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-  position: absolute;
-  white-space: nowrap;
-}
-
-.final-logo {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
-.loading-logo-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 20px;
+.loading-logo {
+  width: 150px;
+  height: 150px;
+  border-radius: 15px;
   object-fit: cover;
-  box-shadow: 0 10px 40px rgba(0, 255, 255, 0.4);
-  border: 3px solid rgba(0, 255, 255, 0.3);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.1);
 }
 
-.loading-title {
-  font-size: 3rem;
-  font-weight: 800;
-  background: linear-gradient(135deg, #00ffff 0%, #0099ff 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
-  margin: 0;
+.loading-text {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.loading-word {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-shadow: 0 2px 10px rgba(255, 255, 255, 0.2);
 }
 
 /* Animated background effects */
@@ -119,17 +85,17 @@ section {
     padding: 60px 20px;
   }
   
+  .loading-logo {
+    width: 100px;
+    height: 100px;
+  }
+  
   .loading-word {
     font-size: 2.5rem;
   }
   
-  .loading-logo-image {
-    width: 80px;
-    height: 80px;
-  }
-  
-  .loading-title {
-    font-size: 2rem;
+  .loading-text {
+    gap: 15px;
   }
 }
 
