@@ -1,0 +1,318 @@
+.booking {
+  background: linear-gradient(180deg, var(--secondary-black) 0%, var(--primary-black) 100%);
+  position: relative;
+}
+
+.booking-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.booking-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.booking-form-wrapper {
+  background: rgba(26, 26, 26, 0.8);
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 50px 40px;
+  backdrop-filter: blur(10px);
+}
+
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+label {
+  color: var(--text-white);
+  font-weight: 600;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.required {
+  color: var(--cyan);
+}
+
+input,
+textarea {
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 10px;
+  color: var(--text-white);
+  font-size: 16px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--cyan);
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+input.error,
+textarea.error {
+  border-color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.email-note {
+  color: var(--text-gray);
+  font-size: 12px;
+  margin-top: 5px;
+  font-style: italic;
+}
+
+.otp-send-button {
+  padding: 10px 20px;
+  background: transparent;
+  border: 2px solid var(--cyan);
+  color: var(--cyan);
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.otp-send-button:hover:not(:disabled) {
+  background: var(--cyan);
+  color: var(--primary-black);
+}
+
+.otp-send-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.email-verified {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #00ff00;
+  font-size: 14px;
+  margin-top: 10px;
+  padding: 8px 12px;
+  background: rgba(0, 255, 0, 0.1);
+  border: 1px solid #00ff00;
+  border-radius: 8px;
+}
+
+.otp-verification {
+  background: rgba(0, 255, 255, 0.05);
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 25px;
+  margin: 20px 0;
+}
+
+.otp-verification h4 {
+  color: var(--cyan);
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.otp-verification p {
+  color: var(--text-gray);
+  margin-bottom: 20px;
+  line-height: 1.5;
+}
+
+.otp-input-group {
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.otp-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(0, 255, 255, 0.2);
+  border-radius: 10px;
+  color: var(--text-white);
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 8px;
+  transition: all 0.3s ease;
+}
+
+.otp-input:focus {
+  outline: none;
+  border-color: var(--cyan);
+  background: rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.otp-verify-button {
+  padding: 15px 25px;
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--bright-blue) 100%);
+  color: var(--primary-black);
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.otp-verify-button:hover:not(:disabled) {
+  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+  transform: translateY(-1px);
+}
+
+.otp-verify-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.otp-error {
+  margin-top: 15px;
+}
+
+.error-message {
+  color: #ff4444;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 5px;
+}
+
+.submit-message {
+  padding: 15px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+}
+
+.submit-message.success {
+  background: rgba(0, 255, 0, 0.1);
+  border: 2px solid #00ff00;
+  color: #00ff00;
+}
+
+.submit-message.error {
+  background: rgba(255, 68, 68, 0.1);
+  border: 2px solid #ff4444;
+  color: #ff4444;
+}
+
+.submit-button {
+  padding: 18px 40px;
+  background: linear-gradient(135deg, var(--cyan) 0%, var(--bright-blue) 100%);
+  color: var(--primary-black);
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+}
+
+.submit-button:hover:not(:disabled) {
+  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+.submit-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .booking-form-wrapper {
+    padding: 30px 20px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .submit-button {
+    padding: 15px 30px;
+    font-size: 16px;
+  }
+
+  .otp-verification {
+    padding: 20px 15px;
+  }
+
+  .otp-input-group {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .otp-input {
+    min-width: 100%;
+    letter-spacing: 4px;
+    font-size: 16px;
+  }
+
+  .otp-verify-button {
+    width: 100%;
+    padding: 12px 20px;
+  }
+
+  .otp-send-button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
