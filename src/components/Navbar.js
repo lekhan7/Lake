@@ -36,8 +36,11 @@ const Navbar = () => {
           whileHover={{ scale: 1.05 }}
           whileTap={{ scale: 0.95 }}
         >
-          <span className="logo-text">Lake</span>
-          <span className="logo-accent">.</span>
+          <img src="/cover.png" alt="Lake Agency Logo" className="logo-image" />
+          <div className="logo-text-container">
+            <span className="logo-text">Lake</span>
+            <span className="logo-accent">.</span>
+          </div>
         </motion.div>
 
         <div className={`nav-links ${isMobileMenuOpen ? 'active' : ''}`}>
