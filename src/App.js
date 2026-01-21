@@ -12,6 +12,12 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
+    // Play intro sound when component mounts
+    const audio = document.getElementById('intro-sound');
+    if (audio) {
+      audio.play().catch(e => console.log('Audio play failed:', e));
+    }
+
     const timer = setTimeout(() => {
       setIsLoading(false);
     }, 2500);
