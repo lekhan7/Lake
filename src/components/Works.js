@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaExternalLinkAlt, FaGithub, FaMobile, FaDesktop, FaGlobe } from 'react-icons/fa';
+import { FaExternalLinkAlt,FaMobile, FaDesktop, FaGlobe } from 'react-icons/fa';
 import './Works.css';
 
 const Works = () => {
