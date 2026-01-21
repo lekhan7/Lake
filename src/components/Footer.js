@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import {  FaEnvelope, FaPhone, FaMapMarkerAlt, } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
