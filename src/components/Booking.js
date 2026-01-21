@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Send, Loader2, CheckCircle, XCircle, Mail } from 'lucide-react';
+import {Loader2, CheckCircle, XCircle, Mail } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 import './Booking.css';
 

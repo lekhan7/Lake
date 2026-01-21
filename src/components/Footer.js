@@ -82,7 +82,7 @@ const Footer = () => {
               </li>
               <li>
                 <FaMapMarkerAlt className="contact-icon" />
-                <a contact-iconhref="https://www.google.com/maps/search/?api=1&query=Bangalore+Karnataka" target="_blank" rel="noopener noreferrer">Bangalore Karnataka</a>
+                <a contact-icon href="https://www.google.com/maps/search/?api=1&query=Bangalore+Karnataka" target="_blank" rel="noopener noreferrer">Bangalore Karnataka</a>
               </li>
             </ul>
           </motion.div>
