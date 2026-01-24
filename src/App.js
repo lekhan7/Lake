@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
+import About from './components/About';
 import Services from './components/Services';
 import Works from './components/Works';
 import Booking from './components/Booking';
+import BookCall from './components/BookCall';
 import Footer from './components/Footer';
 import './App.css';
 
@@ -72,9 +74,11 @@ function App() {
           >
             <Navbar />
             <Hero />
+            <About />
             <Services />
             <Works />
             <Booking />
+            <BookCall />
             <Footer />
           </motion.div>
         )}

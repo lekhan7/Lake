@@ -52,10 +52,16 @@ const Footer = () => {
                 <a href="#home" onClick={() => scrollToSection('home')}>Home</a>
               </li>
               <li>
+                <a href="#about" onClick={() => scrollToSection('about')}>About</a>
+              </li>
+              <li>
                 <a href="#services" onClick={() => scrollToSection('services')}>Services</a>
               </li>
               <li>
-                <a href="#booking" onClick={() => scrollToSection('booking')}>Book Now</a>
+                <a href="#booking" onClick={() => scrollToSection('booking')}>Book Website</a>
+              </li>
+              <li>
+                <a href="#bookcall" onClick={() => scrollToSection('bookcall')}>Book a Call</a>
               </li>
               <li>
                 <a href="#contact" onClick={() => scrollToSection('contact')}>Contact</a>
@@ -82,7 +88,7 @@ const Footer = () => {
               </li>
               <li>
                 <FaMapMarkerAlt className="contact-icon" />
-                <a contact-icon href="https://www.google.com/maps/search/?api=1&query=Bangalore+Karnataka" target="_blank" rel="noopener noreferrer">Bangalore Karnataka</a>
+                <a href="https://www.google.com/maps/search/?api=1&query=Bangalore+Karnataka" target="_blank" rel="noopener noreferrer">Bangalore Karnataka</a>
               </li>
             </ul>
           </motion.div>

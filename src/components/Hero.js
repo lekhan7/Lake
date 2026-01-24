@@ -91,17 +91,9 @@ const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1, delay: 0.5 }}
         >
-          <div className="floating-card card-1">
-            <div className="card-glow"></div>
-            <img src="/service1.png" alt="Service 1" className="service-image" />
-          </div>
-          <div className="floating-card card-2">
-            <div className="card-glow"></div>
-            <img src="/service2.png" alt="Service 2" className="service-image" />
-          </div>
-          <div className="floating-card card-3">
-            <div className="card-glow"></div>
-            <img src="/service3.png" alt="Service 3" className="service-image" />
+          <div className="hero-logo-container">
+            <img src="/cover.png" alt="Lake Agency Logo" className="hero-logo" />
+            <div className="logo-glow"></div>
           </div>
         </motion.div>
       </div>
