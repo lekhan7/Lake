@@ -4,6 +4,9 @@ import { FaCode, FaRocket, FaChartLine, FaEdit } from 'react-icons/fa';
 import './Hero.css';
 
 const Hero = () => {
+  const displayText = 'Welcome to ';
+  const lakeText = 'Lake';
+
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
@@ -43,7 +46,8 @@ const Hero = () => {
           animate="visible"
         >
           <motion.h1 className="hero-title" variants={itemVariants}>
-            Welcome to <span className="gradient-text">Lake</span>
+            <span style={{ color: 'var(--welcome-color)' }}>{displayText}</span>
+            <span className="gradient-text">{lakeText}</span>
           </motion.h1>
           <motion.p className="hero-subtitle" variants={itemVariants}>
             Professional Web Agency by <span className="highlight">Lekhan Karumbaiah K.T.</span>

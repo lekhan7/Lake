@@ -1,6 +1,6 @@
 .footer {
   background: linear-gradient(180deg, var(--primary-black) 0%, var(--secondary-black) 100%);
-  border-top: 2px solid rgba(0, 255, 255, 0.2);
+  border-top: 2px solid rgba(255, 136, 0, 0.2);
   padding: 60px 20px 30px;
   position: relative;
   cursor: pointer;
@@ -31,17 +31,23 @@
   display: flex;
   align-items: center;
   gap: 5px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .footer-logo .logo-accent {
-  color: var(--cyan);
+  color: var(--text-white);
   animation: blink 2s infinite;
+  font-weight: 900;
 }
 
 .footer-description {
   color: var(--text-gray);
   line-height: 1.8;
   font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 .social-links {
@@ -55,19 +61,19 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: rgba(0, 255, 255, 0.1);
-  border: 2px solid rgba(0, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid rgba(255, 255, 255, 0.3);
   border-radius: 50%;
-  color: var(--cyan);
+  color: var(--text-white);
   font-size: 20px;
   text-decoration: none;
   transition: all 0.3s ease;
 }
 
 .social-link:hover {
-  background: rgba(0, 255, 255, 0.2);
-  border-color: var(--cyan);
-  box-shadow: 0 5px 20px rgba(0, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--text-white);
+  box-shadow: 0 5px 20px rgba(255, 255, 255, 0.3);
 }
 
 .social-link.instagram:hover {
@@ -83,6 +89,8 @@
   margin-bottom: 10px;
   position: relative;
   padding-bottom: 10px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.3px;
 }
 
 .footer-title::after {
@@ -92,7 +100,7 @@
   left: 0;
   width: 40px;
   height: 2px;
-  background: linear-gradient(90deg, var(--cyan), transparent);
+  background: linear-gradient(90deg, var(--text-white), transparent);
 }
 
 .footer-links {
@@ -111,10 +119,13 @@
   color: var(--text-gray);
   font-size: 14px;
   transition: color 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 .footer-links li:hover {
-  color: var(--cyan);
+  color: var(--text-white);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .footer-links a {
@@ -129,7 +140,7 @@
 }
 
 .service-icon {
-  color: var(--cyan);
+  color: var(--text-white);
   font-size: 16px;
   flex-shrink: 0;
 }
@@ -149,6 +160,8 @@
   gap: 12px;
   color: var(--text-gray);
   font-size: 14px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 .footer-contact a {
@@ -158,11 +171,12 @@
 }
 
 .footer-contact a:hover {
-  color: var(--cyan);
+  color: var(--text-white);
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 .contact-icon {
-  color: var(--cyan);
+  color: var(--text-white);
   font-size: 18px;
   flex-shrink: 0;
 }
@@ -173,7 +187,7 @@
 
 .footer-divider {
   height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(0, 255, 255, 0.3), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
   margin-bottom: 30px;
 }
 
@@ -182,11 +196,14 @@
   color: var(--text-gray);
   font-size: 14px;
   line-height: 1.8;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 .owner-name {
-  color: var(--cyan);
+  color: var(--text-white);
   font-weight: 600;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {

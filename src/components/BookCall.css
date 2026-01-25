@@ -1,6 +1,6 @@
 .bookcall {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  background: linear-gradient(135deg, #000000 0%, #0a0a0a 100%);
   padding: 80px 20px 40px;
   position: relative;
   overflow: hidden;
@@ -14,8 +14,8 @@
   right: 0;
   bottom: 0;
   background: 
-    radial-gradient(circle at 20% 20%, rgba(59, 130, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 20%, rgba(255, 136, 0, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 170, 51, 0.1) 0%, transparent 50%);
   pointer-events: none;
 }
 
@@ -32,11 +32,15 @@
 }
 
 .bookcall-header h2 {
-  background: linear-gradient(135deg, #60a5fa 0%, #34d399 100%);
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   margin-bottom: 16px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+  text-shadow: 0 0 30px rgba(255, 136, 0, 0.3);
 }
 
 .bookcall-form-wrapper {
@@ -58,12 +62,14 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #60a5fa;
+  color: var(--orange);
   font-size: 1.2rem;
   font-weight: 600;
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid rgba(96, 165, 250, 0.2);
+  border-bottom: 2px solid rgba(255, 136, 0, 0.2);
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.3px;
 }
 
 .form-row {
@@ -84,6 +90,8 @@
   margin-bottom: 8px;
   align-items: center;
   gap: 8px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 600;
 }
 
 .required {
@@ -101,15 +109,17 @@
   color: #e2e8f0;
   font-size: 16px;
   transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #60a5fa;
+  border-color: var(--orange);
   background: rgba(15, 23, 42, 0.8);
-  box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.1);
+  box-shadow: 0 0 0 3px rgba(255, 136, 0, 0.1);
 }
 
 .form-group input.error,
@@ -157,24 +167,27 @@
 }
 
 .call-type-option input[type="radio"]:checked + .call-type-card {
-  border-color: #60a5fa;
-  background: rgba(96, 165, 250, 0.1);
+  border-color: var(--orange);
+  background: rgba(255, 136, 0, 0.1);
   color: #e2e8f0;
 }
 
 .call-type-card:hover {
-  border-color: #60a5fa;
+  border-color: var(--orange);
   transform: translateY(-2px);
 }
 
 .call-type-label {
   font-weight: 600;
   color: #e2e8f0;
+  font-family: 'Inter', sans-serif;
 }
 
 .call-type-duration {
   font-size: 0.875rem;
   color: #94a3b8;
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
 }
 
 .error-message {
@@ -184,6 +197,8 @@
   color: #ef4444;
   font-size: 0.875rem;
   margin-top: 6px;
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
 }
 
 .submit-message {
@@ -210,8 +225,8 @@
 .submit-button {
   width: 100%;
   padding: 16px 24px;
-  background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
-  color: white;
+  background: linear-gradient(135deg, var(--orange) 0%, var(--orange-light) 100%);
+  color: var(--primary-black);
   border: none;
   border-radius: 10px;
   font-size: 16px;
@@ -223,11 +238,13 @@
   gap: 10px;
   transition: all 0.3s ease;
   margin-top: 20px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.3px;
 }
 
 .submit-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: 0 10px 20px rgba(59, 130, 246, 0.3);
+  box-shadow: 0 10px 20px rgba(255, 136, 0, 0.3);
 }
 
 .submit-button:disabled {

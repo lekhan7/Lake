@@ -93,23 +93,24 @@ textarea::placeholder {
 .otp-send-button {
   padding: 10px 20px;
   background: transparent;
-  border: 2px solid var(--cyan);
-  color: var(--cyan);
-  border-radius: 10px;
+  border: 2px solid #00ff88;
+  color: #00ff88;
+  border-radius: 8px;
   font-size: 14px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-top: 10px;
-  align-self: flex-start;
   display: flex;
   align-items: center;
   gap: 8px;
+  margin-top: 10px;
+  align-self: flex-start;
 }
 
 .otp-send-button:hover:not(:disabled) {
-  background: var(--cyan);
-  color: var(--primary-black);
+  background: #00ff88;
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
 }
 
 .otp-send-button:disabled {
@@ -181,8 +182,8 @@ textarea::placeholder {
 
 .otp-verify-button {
   padding: 15px 25px;
-  background: linear-gradient(135deg, var(--cyan) 0%, var(--bright-blue) 100%);
-  color: var(--primary-black);
+  background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+  color: #000000;
   border: none;
   border-radius: 10px;
   font-size: 16px;
@@ -190,10 +191,11 @@ textarea::placeholder {
   cursor: pointer;
   transition: all 0.3s ease;
   white-space: nowrap;
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
 }
 
 .otp-verify-button:hover:not(:disabled) {
-  box-shadow: 0 5px 15px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 5px 15px rgba(0, 255, 136, 0.4);
   transform: translateY(-1px);
 }
 
@@ -238,23 +240,24 @@ textarea::placeholder {
 
 .submit-button {
   padding: 18px 40px;
-  background: linear-gradient(135deg, var(--cyan) 0%, var(--bright-blue) 100%);
-  color: var(--primary-black);
+  background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+  color: #000000;
   border: none;
-  border-radius: 50px;
+  border-radius: 12px;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 10px;
-  transition: all 0.3s ease;
-  margin-top: 10px;
+  margin: 20px auto 0;
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
 }
 
 .submit-button:hover:not(:disabled) {
-  box-shadow: 0 10px 30px rgba(0, 255, 255, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 255, 136, 0.4);
   transform: translateY(-2px);
 }
 

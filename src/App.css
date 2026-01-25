@@ -1,24 +1,24 @@
 .App {
   min-height: 100vh;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 50%, #ffffff 100%);
+  background: #000000;
   position: relative;
   overflow-x: hidden;
 }
 
-/* CSS Variables - New Exciting Color Scheme */
+/* CSS Variables - Professional Color Scheme */
 :root {
-  --primary-color: #6366f1;
-  --secondary-color: #8b5cf6;
-  --accent-color: #ec4899;
-  --text-dark: #1e293b;
-  --text-light: #64748b;
-  --text-white: #ffffff;
-  --bg-light: #f8fafc;
-  --bg-card: #ffffff;
-  --border-color: #e2e8f0;
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  --primary-color: var(--yellow);
+  --secondary-color: var(--yellow-light);
+  --accent-color: var(--orange-accent);
+  --text-dark: var(--text-primary);
+  --text-light: var(--text-secondary);
+  --text-white: var(--text-primary);
+  --bg-light: var(--dark-gray);
+  --bg-card: var(--primary-black);
+  --border-color: #333333;
+  --shadow-sm: 0 1px 2px 0 rgba(255, 215, 0, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(255, 215, 0, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(255, 215, 0, 0.1);
 }
 
 /* Loading Screen Styles */
@@ -72,9 +72,9 @@
   width: 100%;
   height: 100%;
   background: 
-    radial-gradient(circle at 20% 50%, rgba(99, 102, 241, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 80%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 20%, rgba(236, 72, 153, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(255, 215, 0, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 245, 157, 0.02) 0%, transparent 50%),
+    radial-gradient(circle at 40% 20%, rgba(255, 107, 53, 0.02) 0%, transparent 50%);
   pointer-events: none;
   z-index: 0;
   animation: pulse 15s ease-in-out infinite;
@@ -106,20 +106,24 @@ section {
 /* Common title styles */
 .section-title {
   font-size: 48px;
-  font-weight: 800;
+  font-weight: 900;
   line-height: 1.2;
   margin-bottom: 20px;
-  color: var(--text-dark);
+  color: var(--text-primary);
   text-align: center;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 40px rgba(255, 215, 0, 0.3);
 }
 
 .gradient-text {
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 50%, var(--accent-color) 100%);
+  background: linear-gradient(135deg, var(--yellow) 0%, var(--yellow-light) 50%, var(--orange-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   animation: gradient-shift 3s ease infinite;
   background-size: 200% 200%;
+  font-weight: 900;
 }
 
 @keyframes gradient-shift {
@@ -129,15 +133,18 @@ section {
 
 .subtitle {
   font-size: 24px;
-  color: var(--text-light);
+  color: var(--text-secondary);
   margin-bottom: 15px;
   font-weight: 400;
   text-align: center;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.01em;
 }
 
 .highlight {
-  color: var(--primary-color);
-  font-weight: 600;
+  color: var(--orange-accent);
+  font-weight: 700;
+  text-shadow: 0 0 20px rgba(255, 107, 53, 0.4);
 }
 
 /* Book Call Page Styles */
@@ -342,8 +349,8 @@ section {
 .submit-button {
   width: 100%;
   padding: 16px 24px;
-  background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-  color: var(--text-white);
+  background: linear-gradient(135deg, #00ff88 0%, #00cc6a 100%);
+  color: #000000;
   border: none;
   border-radius: 10px;
   font-size: 16px;
@@ -355,11 +362,12 @@ section {
   gap: 10px;
   transition: all 0.3s ease;
   margin-top: 20px;
+  box-shadow: 0 4px 15px rgba(0, 255, 136, 0.3);
 }
 
 .submit-button:hover:not(:disabled) {
   transform: translateY(-2px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 10px 20px rgba(0, 255, 136, 0.4);
 }
 
 .submit-button:disabled {

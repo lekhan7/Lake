@@ -13,7 +13,7 @@
   background: rgba(0, 0, 0, 0.95);
   backdrop-filter: blur(10px);
   padding: 15px 0;
-  box-shadow: 0 4px 20px rgba(0, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(255, 215, 0, 0.1);
 }
 
 .nav-container {
@@ -27,12 +27,15 @@
 
 .logo {
   font-size: 28px;
-  font-weight: 800;
-  color: var(--text-white);
+  font-weight: 900;
+  color: var(--text-primary);
   cursor: pointer;
   display: flex;
   align-items: center;
   gap: 12px;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
 }
 
 .logo-image {
@@ -40,12 +43,12 @@
   height: 50px;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
   transition: all 0.3s ease;
 }
 
 .logo-image:hover {
-  box-shadow: 0 6px 20px rgba(0, 255, 255, 0.5);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.4);
   transform: rotate(5deg);
 }
 
@@ -56,15 +59,18 @@
 }
 
 .logo-text {
-  background: linear-gradient(135deg, var(--cyan) 0%, var(--bright-blue) 100%);
+  background: linear-gradient(135deg, var(--yellow) 0%, var(--orange-accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 900;
+  letter-spacing: -0.01em;
 }
 
 .logo-accent {
-  color: var(--cyan);
+  color: var(--text-primary);
   animation: blink 2s infinite;
+  font-weight: 900;
 }
 
 @keyframes blink {
@@ -79,13 +85,15 @@
 }
 
 .nav-links a {
-  color: var(--text-white);
+  color: var(--text-primary);
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 16px;
   position: relative;
   transition: color 0.3s ease;
   cursor: pointer;
+  font-family: 'Inter', sans-serif;
+  letter-spacing: 0.01em;
 }
 
 .nav-links a::after {
@@ -95,12 +103,13 @@
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--cyan), var(--bright-blue));
+  background: linear-gradient(90deg, var(--text-primary), var(--text-secondary));
   transition: width 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: var(--cyan);
+  color: var(--text-primary);
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
 .nav-links a:hover::after {
@@ -111,7 +120,7 @@
   display: none;
   background: transparent;
   border: none;
-  color: var(--cyan);
+  color: var(--text-primary);
   font-size: 24px;
   cursor: pointer;
   z-index: 1001;
@@ -135,7 +144,7 @@
     align-items: center;
     gap: 30px;
     transition: right 0.3s ease;
-    box-shadow: -5px 0 20px rgba(0, 255, 255, 0.2);
+  box-shadow: -5px 0 20px rgba(255, 255, 255, 0.2);
   }
 
   .nav-links.active {
