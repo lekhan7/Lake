@@ -39,7 +39,7 @@ const Navbar = () => {
           <img src="/cover.png" alt="Lake Agency Logo" className="logo-image" />
           <div className="logo-text-container">
             <span className="logo-text">Lake</span>
-            <span className="logo-accent">.</span>
+           
           </div>
         </motion.div>
 
