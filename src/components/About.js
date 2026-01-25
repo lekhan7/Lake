@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaRocket, FaUsers, FaAward, FaLightbulb, FaHeart } from 'react-icons/fa';
+import { FaRocket, FaUsers, FaAward, FaLightbulb, FaHeart } from 'react-icons/fa';
 
 const About = () => {
   const containerVariants = {

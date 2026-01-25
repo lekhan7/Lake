@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Calendar, Clock, User, Mail, Phone, MessageSquare, CheckCircle, XCircle, Loader2, Video, MapPin } from 'lucide-react';
+import { Calendar, User, Phone, MessageSquare, CheckCircle, XCircle, Loader2, Video, MapPin } from 'lucide-react';
 import emailjs from '@emailjs/browser';
 
 // CONFIGURATION - Replace with your EmailJS credentials
